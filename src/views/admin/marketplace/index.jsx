@@ -24,42 +24,8 @@ const Marketplace = () => {
         {/* NFt Header */}
         <div className="mb-4 mt-5 flex flex-col justify-between px-4 md:flex-row md:items-center">
           <h4 className="ml-1 text-2xl font-bold text-navy-700 dark:text-white">
-            Trending NFTs
+            Trending Investments
           </h4>
-          <ul className="mt-4 flex items-center justify-between md:mt-0 md:justify-center md:!gap-5 2xl:!gap-12">
-            <li>
-              <a
-                className="text-base font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                href=" "
-              >
-                Art
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-base font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                href=" "
-              >
-                Music
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-base font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                href=" "
-              >
-                Collection
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-base font-medium text-brand-500 hover:text-brand-500 dark:text-white"
-                href=" "
-              >
-                <a href=" ">Sports</a>
-              </a>
-            </li>
-          </ul>
         </div>
 
         {/* NFTs trending card */}
@@ -68,21 +34,21 @@ const Marketplace = () => {
             bidders={[avatar1, avatar2, avatar3]}
             title="Abstract Colors"
             author="Esthera Jackson"
-            price="0.91"
+            price="15"
             image={NFt3}
           />
           <NftCard
             bidders={[avatar1, avatar2, avatar3]}
             title="ETH AI Brain"
             author="Nick Wilson"
-            price="0.7"
+            price="20"
             image={NFt2}
           />
           <NftCard
             bidders={[avatar1, avatar2, avatar3]}
             title="Mesh Gradients"
             author="Will Smith"
-            price="2.91"
+            price="30"
             image={NFt4}
           />
         </div>
@@ -100,21 +66,21 @@ const Marketplace = () => {
             bidders={[avatar1, avatar2, avatar3]}
             title="Abstract Colors"
             author="Esthera Jackson"
-            price="0.91"
+            price="15"
             image={NFt4}
           />
           <NftCard
             bidders={[avatar1, avatar2, avatar3]}
             title="ETH AI Brain"
             author="Nick Wilson"
-            price="0.7"
+            price="20"
             image={NFt5}
           />
           <NftCard
             bidders={[avatar1, avatar2, avatar3]}
             title="Mesh Gradients"
             author="Will Smith"
-            price="2.91"
+            price="30"
             image={NFt6}
           />
         </div>

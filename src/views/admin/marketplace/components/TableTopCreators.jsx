@@ -1,5 +1,4 @@
 import React from "react";
-import Progress from "components/progress";
 import Card from "components/card";
 
 import {
@@ -22,13 +21,6 @@ function CheckTable(props) {
       ),
       cell: (info) => (
         <div className="flex items-center gap-2">
-          <div className="h-[30px] w-[30px] rounded-full">
-            <img
-              src={info.getValue()[1]}
-              className="h-full w-full rounded-full"
-              alt=""
-            />
-          </div>
           <p className="text-sm font-medium text-navy-700 dark:text-white">
             {info.getValue()[0]}
           </p>
@@ -39,7 +31,7 @@ function CheckTable(props) {
       id: "artworks",
       header: () => (
         <p className="text-sm font-bold text-gray-600 dark:text-white">
-          ARTWORKS
+          Deposit
         </p>
       ),
       cell: (info) => (
@@ -52,12 +44,14 @@ function CheckTable(props) {
       id: "rating",
       header: () => (
         <p className="text-sm font-bold text-gray-600 dark:text-white">
-          RATING
+          Gains
         </p>
       ),
       cell: (info) => (
         <div className="mx-2 flex font-bold">
-          <Progress width="w-16" value={info.getValue()} />
+          <p className="text-md font-medium text-gray-600 dark:text-white">
+          GHS 500
+        </p>
         </div>
       ),
     }),
@@ -78,7 +72,7 @@ function CheckTable(props) {
     <Card extra={"w-full sm:overflow-auto px-6"}>
       <header className="relative flex items-center justify-between pt-4">
         <div className="text-xl font-bold text-navy-700 dark:text-white">
-          Check Table
+          Top Earners
         </div>
 
         <button className="dark:active-bg-white-20 linear rounded-md bg-lightPrimary px-4 py-2 text-base font-medium text-brand-500 transition duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-white/5 dark:text-white dark:hover:bg-white/10">
@@ -126,7 +120,7 @@ function CheckTable(props) {
                       return (
                         <td
                           key={cell.id}
-                          className="min-w-[150px] border-white/0 py-3  pr-4"
+                          className="min-w-[99px] border-white/0 py-3  pr-4"
                         >
                           {flexRender(
                             cell.column.columnDef.cell,
