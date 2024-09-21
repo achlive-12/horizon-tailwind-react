@@ -13,17 +13,17 @@ const Dashboard = () => {
         <Widget
           icon={<MdBarChart className="h-7 w-7" />}
           title={"Earnings"}
-          subtitle={"$340.5"}
+          subtitle={"GHS 340"}
         />
         <Widget
           icon={<IoDocuments className="h-6 w-6" />}
           title={"Deposit"}
-          subtitle={"$642.39"}
+          subtitle={"GHS 15"}
         />
         <Widget
           icon={<MdBarChart className="h-7 w-7" />}
           title={"Balance"}
-          subtitle={"$574.34"}
+          subtitle={"GHS 355"}
         />
       </div>
       <Card extra={"w-full p-2 h-full mt-4"}>
