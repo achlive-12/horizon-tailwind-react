@@ -2,7 +2,7 @@ import React from "react";
 import Dropdown from "components/dropdown";
 import { FiAlignJustify } from "react-icons/fi";
 import { RiMoonFill, RiSunFill } from "react-icons/ri";
-import avatar from "assets/img/avatars/avatar4.png";
+import avatar from "assets/img/avatars/male.png";
 
 const Navbar = (props) => {
   const { onOpenSidenav} = props;
@@ -56,7 +56,7 @@ const Navbar = (props) => {
               <div className="p-4">
                 <div className="flex items-center gap-2">
                   <p className="text-sm font-bold text-navy-700 dark:text-white">
-                    👋 Hey, Adela
+                    👋 Username
                   </p>{" "}
                 </div>
               </div>
@@ -64,7 +64,7 @@ const Navbar = (props) => {
 
               <div className="flex flex-col p-4">
                 <a
-                  href=" "
+                  href="/admin/profile"
                   className="text-sm text-gray-800 dark:text-white hover:dark:text-white"
                 >
                   Profile Settings
