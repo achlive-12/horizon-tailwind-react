@@ -4,6 +4,17 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      animation: {
+        slideUpFade: 'slideUpFade 6s ease-in-out',
+      },
+      keyframes: {
+        slideUpFade: {
+          '0%': { transform: 'translateY(100%)', opacity: '0' },
+          '50%': { transform: 'translateY(0)', opacity: '1' },
+          '100%': { transform: 'translateY(-50%)', opacity: '0' },
+        },
+      },
+      
       width: {
         "1p": "1%",
         "2p": "2%",
@@ -139,6 +150,7 @@ module.exports = {
       lightPrimary: "#F4F7FE",
       blueSecondary: "#4318FF",
       brandLinear: "#868CFF",
+      neongreen: "#00FFA3",
       gray: {
         50: "#f8f9fa",
         100: "#edf2f7",

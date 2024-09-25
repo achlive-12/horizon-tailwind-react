@@ -63,59 +63,59 @@ const Dashboard = () => {
               <div className="h-full w-[80%] bg-brand-500 rounded-full hover:bg-brand-700 transition-colors duration-300"></div>
             </div>
           </div>
-        </Card>
+      </Card>
       < Marketplace />
       {/* Comments card */}
       <Card extra={"w-full p-4 h-full mt-4"}>
-      <div className="flex flex-col w-full h-full p-4">
-        {/* Card header */}
-        <div className="flex items-center justify-between">
-          <h4 className="text-xl font-bold text-navy-700 dark:text-white">
-            User Comments
-          </h4>
-        </div>
+        <div className="flex flex-col w-full h-full p-4">
+          {/* Card header */}
+          <div className="flex items-center justify-between">
+            <h4 className="text-xl font-bold text-navy-700 dark:text-white">
+              User Comments
+            </h4>
+          </div>
 
-        {/* Comments section */}
-        <div className="mt-4 space-y-4">
-          {comments.map((comment, index) => (
-            <div key={index} className="p-4 bg-gray-100 rounded-lg dark:bg-navy-700">
-              <h5 className="font-semibold text-navy-600 dark:text-white">
-                {comment.name}
-              </h5>
-              <p className="text-gray-500 dark:text-gray-300">
-                {comment.text}
-              </p>
-              <p className="mt-1 text-sm text-gray-400 dark:text-gray-500">{comment.time}</p>
-            </div>
-          ))}
-        </div>
+          {/* Comments section */}
+          <div className="mt-4 space-y-4">
+            {comments.map((comment, index) => (
+              <div key={index} className="p-4 bg-gray-100 rounded-lg dark:bg-navy-700">
+                <h5 className="font-semibold text-navy-600 dark:text-white">
+                  {comment.name}
+                </h5>
+                <p className="text-gray-500 dark:text-gray-300">
+                  {comment.text}
+                </p>
+                <p className="mt-1 text-sm text-gray-400 dark:text-gray-500">{comment.time}</p>
+              </div>
+            ))}
+          </div>
 
-        {/* Add new comment */}
-        <div className="mt-6">
-          <h5 className="font-semibold text-navy-600 dark:text-white mb-2">Add a Comment</h5>
-          <input
-            type="text"
-            placeholder="Your name"
-            className="w-full p-2 mb-2 border rounded-lg dark:bg-navy-800 dark:text-white"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <textarea
-            placeholder="Write your comment..."
-            className="w-full p-2 mb-4 border rounded-lg dark:bg-navy-800 dark:text-white"
-            rows="3"
-            value={newComment}
-            onChange={(e) => setNewComment(e.target.value)}
-          />
-          <button
-            onClick={handlePostComment}
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 active:bg-blue-700"
-          >
-            Post Comment
-          </button>
+          {/* Add new comment */}
+          <div className="mt-6">
+            <h5 className="font-semibold text-navy-600 dark:text-white mb-2">Add a Comment</h5>
+            <input
+              type="text"
+              placeholder="Your name"
+              className="w-full p-2 mb-2 border rounded-lg dark:bg-navy-800 dark:text-white"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <textarea
+              placeholder="Write your comment..."
+              className="w-full p-2 mb-4 border rounded-lg dark:bg-navy-800 dark:text-white"
+              rows="3"
+              value={newComment}
+              onChange={(e) => setNewComment(e.target.value)}
+            />
+            <button
+              onClick={handlePostComment}
+              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 active:bg-blue-700"
+            >
+              Post Comment
+            </button>
+          </div>
         </div>
-      </div>
-    </Card>
+      </Card>
       {/* FAQs card */}
       <Card extra={"w-full p-4 h-full mt-4"}>
         <div className="flex flex-col w-full h-full p-4">
