@@ -22,7 +22,7 @@ const Marketplace = () => {
         <Banner />
 
         {/* NFt Header */}
-        <div className="mb-4 mt-5 flex flex-col justify-between px-4 md:flex-row md:items-center">
+        <div className="mb-4 mt-5 flex flex-col justify-between px-4 md:flex-row md:items-center" id='invest'>
           <h4 className="ml-1 text-2xl font-bold text-navy-700 dark:text-white">
             Trending Investments
           </h4>

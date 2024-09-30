@@ -1,4 +1,17 @@
+import React, { useState } from 'react';
+import TermsModal from '../modal/TermsModal';  // Import the modal component
+
 const Footer = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <div className="flex w-full flex-col items-center justify-between px-1 pb-8 pt-3 lg:px-8 xl:flex-row">
       <h5 className="mb-4 text-center text-sm font-medium text-gray-600 sm:!mb-0 md:text-lg">
@@ -18,16 +31,19 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a
-              target="blank"
-              href="https://simmmple.com/terms-of-service"
+            {/* Trigger modal on click */}
+            <button
+              onClick={handleOpenModal}
               className="text-base font-medium text-gray-600 hover:text-gray-600"
             >
               Terms of Use
-            </a>
+            </button>
           </li>
         </ul>
       </div>
+
+      {/* Modal for Terms and Conditions */}
+      <TermsModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };

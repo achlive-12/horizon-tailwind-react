@@ -60,36 +60,27 @@ const Banner = () => {
           <p className="text-sm font-normal text-gray-600">Balance</p>
         </div>
       </div>
-      {/* Deposit/Profit/Other */}
-      <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-        <div className="flex flex-col items-center justify-center p-4 rounded-lg">
-          <div className="flex items-center">
-            <span className="h-3 w-3 rounded-full bg-red-500 mr-2"></span>
-            <p className="text-lg font-semibold text-navy-700 dark:text-white">Deposit</p>
-          </div>
-          <p className="text-sm font-normal text-gray-600">Not eligible for withdrawal</p>
-        </div>
-        <div className="flex flex-col items-center justify-center p-4 rounded-lg">
-          <div className="flex items-center">
-            <span className="h-3 w-3 rounded-full bg-green-500 mr-2"></span>
-            <p className="text-lg font-semibold text-navy-700 dark:text-white">Profits</p>
-          </div>
-          <p className="text-sm font-normal text-gray-600">Eligible for withdrawal</p>
-        </div>
-      </div>
+  
 
       {/* Action buttons */}
-      <div className="flex justify-between items-center gap-5">
-        <button className="w-40 h-10 bg-red-500 text-white rounded-lg my-5 hover:bg-red-600 transition duration-300">
+      <div className="flex flex-row md:flex-row justify-between items-center gap-3">
+        <button className="w-full p-2 h-10 bg-red-500 text-white rounded-lg my-5 hover:bg-red-600 transition duration-300 whitespace-nowrap">
           Delete Account
         </button>
         <button
-          className="w-40 h-10 bg-blue-500 text-white rounded-lg my-5 hover:bg-blue-600 transition duration-300"
+          className="w-full px-3 h-10 bg-blue-500 text-white rounded-lg my-5 hover:bg-blue-600 transition duration-300 whitespace-nowrap"
           onClick={() => setShowModal(true)}
+        >
+          Opt Out
+        </button>
+        <button
+          className="w-full p-2 h-10 bg-gray-500 text-white rounded-lg my-5 hover:bg-green-600 transition duration-300 whitespace-nowrap"
+          disabled
         >
           Withdraw
         </button>
       </div>
+
       {/* Withdraw Modal */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
