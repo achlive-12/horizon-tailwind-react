@@ -13,7 +13,12 @@ const Dashboard = () => {
     { name: "Jane Smith", text: "Just withdrew for the third time! This platform has been great so far. Looking forward to the next investment opportunity.", time: "5 days ago" },
     { name: "David Roberts", text: "The withdrawal process was really fast! Got my funds within 24 hours. Ready for the next round!", time: "1 week ago" },
   ]);
-
+  const handlePlayNowClick = () => {
+    const gameSection = document.getElementById('invest');
+    if (gameSection) {
+      gameSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   // State for the new comment input
   const [newComment, setNewComment] = useState("");
   const [name, setName] = useState("");
@@ -117,21 +122,30 @@ const Dashboard = () => {
         </div>
       </Card>
       {/* FAQs card */}
-      <Card extra={"w-full p-4 h-full mt-4"}>
-        <div className="flex flex-col w-full h-full p-4">
+      <Card extra={"w-full p-4 h-full mt-4" } id='faq'>
+        <div className="flex flex-col w-full h-full p-4" >
           <div className="flex items-center justify-between">
             <h4 className="text-xl font-bold text-navy-700 dark:text-white">
               FAQs
             </h4>
           </div>
           <div className="mt-4 space-y-4">
+            {/* FAQ 7 */}
+            <div>
+              <h5 className="font-semibold text-navy-600 dark:text-white">
+                What happens if I opt out of an invest?
+              </h5>
+              <p className="text-gray-500 dark:text-gray-300">
+                You will be refunded your initial investment and any profit(Not only limited to investment returns) made will be forfeited.
+              </p>
+            </div>
             {/* FAQ 1 */}
             <div>
               <h5 className="font-semibold text-navy-600 dark:text-white">
                 When can I withdraw my profits?
               </h5>
               <p className="text-gray-500 dark:text-gray-300">
-                Profits are only available for withdrawal when the target is reached.
+                Profits are only available for withdrawal when the target for investors is reached.
               </p>
             </div>
 
@@ -141,7 +155,7 @@ const Dashboard = () => {
                 How do I gain more?
               </h5>
               <p className="text-gray-500 dark:text-gray-300">
-                Refer more users to gain more. Each referral fetches you 15% of the
+                Refer and play games to earn more. Each referral fetches you 15% of the
                 referee's profit.
               </p>
             </div>
@@ -174,8 +188,7 @@ const Dashboard = () => {
                 Can I invest using cryptocurrency?
               </h5>
               <p className="text-gray-500 dark:text-gray-300">
-                Yes, we accept various cryptocurrencies for investment. Check our
-                supported currencies page for more details.
+                No, we do not accept various cryptocurrencies for investment.
               </p>
             </div>
 
@@ -185,21 +198,16 @@ const Dashboard = () => {
                 Is there a limit to how much I can invest?
               </h5>
               <p className="text-gray-500 dark:text-gray-300">
-                There's no upper limit on investments, but you can start with as little
-                as $10 to begin earning.
+                You can only invest in three firms for now. You can only invest once in any single firm at a time unless you opt out of the current investment.
               </p>
             </div>
-
-            {/* FAQ 7 */}
-            <div>
-              <h5 className="font-semibold text-navy-600 dark:text-white">
-                What happens if I forget my account password?
-              </h5>
-              <p className="text-gray-500 dark:text-gray-300">
-                You can easily reset your password by clicking on "Forgot Password" on
-                the login page and following the instructions sent to your email.
-              </p>
-            </div>
+            {/* Begin Button */}
+            <button
+              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 active:bg-blue-700"
+              onClick={handlePlayNowClick}
+            >
+              Begin
+            </button>
           </div>
         </div>
       </Card>

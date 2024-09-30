@@ -1,6 +1,7 @@
+import React from 'react';
 import Card from "components/card";
 
-const Widget = ({ icon, title, subtitle }) => {
+const Widget = React.forwardRef(({ icon, title, subtitle }, ref) => {
   return (
     <Card extra="!flex-row flex-grow items-center rounded-[20px] hover:cursor-pointer">
       <div className="ml-[18px] flex h-[90px] w-auto flex-row items-center">
@@ -19,6 +20,6 @@ const Widget = ({ icon, title, subtitle }) => {
       </div>
     </Card>
   );
-};
+});
 
 export default Widget;
