@@ -41,7 +41,7 @@ const Banner = () => {
 
       {/* Name and position */}
       <div className="mt-16 flex flex-col items-center">
-        <h4 className="text-xl font-bold text-navy-700 dark:text-white">User Name</h4>
+        <h4 className="text-xl font-bold text-navy-700 dark:text-white">Hello 👋</h4>
         <p className="text-base font-normal text-gray-600">Investor</p>
       </div>
 
@@ -68,7 +68,7 @@ const Banner = () => {
           Delete Account
         </button>
         <button
-          className="w-full px-3 h-10 bg-blue-500 text-white rounded-lg my-5 hover:bg-blue-600 transition duration-300 whitespace-nowrap"
+          className="w-full px-3 h-10 bg-red-500 text-white rounded-lg my-5 hover:bg-red-600 transition duration-300 whitespace-nowrap"
           onClick={() => setShowModal(true)}
         >
           Opt Out
@@ -128,15 +128,24 @@ const Banner = () => {
                   <p className="text-gray-700 dark:text-white">
                     <strong>Network:</strong> MTN
                   </p>
+                  {/* Add Warning details here */}
+                  <p>
+                    <strong className="text-red-500">Warning: You are about to opt out, This action is irreversible.</strong>
+                  </p>
                 </div>
-                <div className="mb-4">
-                  <label className="block text-gray-700 dark:text-white">Amount to Withdraw</label>
-                  <input
-                    type="text"
-                    className="w-full p-2 border rounded-lg dark:bg-navy-700 dark:text-white"
-                    value={withdrawAmount}
-                    onChange={(e) => setWithdrawAmount(e.target.value)}
-                  />
+                <label className="block text-gray-700 dark:text-white">Amount to Withdraw</label>
+                <div className="flex flex-row gap-3 mb-4">
+                  
+                  <button
+                  className="w-full p-2 border rounded-lg dark:bg-navy-700 dark:text-white active:border-red-500"
+                  >
+                    GHS 15
+                  </button>
+                  <button
+                  className="w-full p-2 border rounded-lg dark:bg-navy-700 dark:text-white"
+                  >
+                    GHS 30
+                  </button>
                 </div>
                 <div className="flex justify-end gap-2">
                   <button
@@ -146,13 +155,13 @@ const Banner = () => {
                     Back
                   </button>
                   <button
-                    className={`px-4 py-2 bg-green-500 text-white rounded-lg ${
+                    className={`px-4 py-2 bg-red-500 text-white rounded-lg ${
                       isLoading ? "opacity-50 cursor-not-allowed" : ""
                     }`}
                     onClick={handleWithdraw}
                     disabled={!withdrawAmount || isLoading}
                   >
-                    {isLoading ? "Processing..." : "Withdraw"}
+                    {isLoading ? "Processing..." : "Opt Out"}
                   </button>
                 </div>
               </>
